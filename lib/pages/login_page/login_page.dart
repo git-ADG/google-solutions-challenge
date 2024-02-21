@@ -2,6 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_solutions_challenge/pages/homepage/homepage.dart';
 
 import '../../config/configurations/loading_overlay.dart';
 import '../../utils/exit_message.dart';
@@ -277,6 +278,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             onPressed: () {
                               loginUserWithEmailAndPassword(context);
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                             }, //validate(context),
                             child: const Text(
                               'LOGIN',
